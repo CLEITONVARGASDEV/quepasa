@@ -15,7 +15,7 @@ services:
       - $QUEPASA_EXTERNAL_PORT:$QUEPASA_INTERNAL_PORT
     build:
       context: ../
-      dockerfile: ./Dockerfile
+      dockerfile: ./docker/Dockerfile
     volumes:
       - ../src:/opt/quepasa
     networks:
