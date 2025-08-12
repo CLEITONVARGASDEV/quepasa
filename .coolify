@@ -1,0 +1,12 @@
+{
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": ".",
+    "port": 31000
+  },
+  "environment": {
+    "WEBAPIHOST": "0.0.0.0",
+    "WEBAPIPORT": "31000",
+    "GOOS": "linux"
+  }
+}
