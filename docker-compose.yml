@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  quepasa:
+    build: .
+    container_name: quepasa
+    restart: unless-stopped
+    ports:
+      - "31000:31000"
+    environment:
+      - WEBAPIHOST=0.0.0.0
+      - WEBAPIPORT=31000
+      - GOOS=linux
+      - DB_HOST=${DB_HOST:-localhost}
+      - DB_PORT=${DB_PORT:-5432}
+      - DB_NAME=${DB_NAME:-quepasa}
+      - DB_USER=${DB_USER:-quepasa}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - MASTERKEY=${MASTERKEY}
+      - APP_TITLE=${APP_TITLE:-VSTec}
+      - LOGLEVEL=${LOGLEVEL:-info}
+    volumes:
+      - quepasa_data:/app/data
+    networks:
+      - quepasa_network
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: quepasa_postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=${DB_NAME:-quepasa}
+      - POSTGRES_USER=${DB_USER:-quepasa}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - quepasa_network
+
+volumes:
+  quepasa_data:
+  postgres_data:
+
+networks:
+  quepasa_network:
+    driver: bridge
