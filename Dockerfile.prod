@@ -1,4 +1,4 @@
-# Dockerfile para Coolify
+# Dockerfile de Produção para Coolify
 FROM golang:1.21-alpine
 
 # Instalar dependências

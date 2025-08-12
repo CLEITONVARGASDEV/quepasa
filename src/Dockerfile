@@ -1,4 +1,4 @@
-# Dockerfile para Coolify
+# Dockerfile para Coolify (dentro de src/)
 FROM golang:1.21-alpine
 
 # Instalar dependências
@@ -8,13 +8,13 @@ RUN apk add --no-cache git ca-certificates tzdata
 WORKDIR /app
 
 # Copiar arquivos de dependências
-COPY src/go.mod src/go.sum ./
+COPY go.mod go.sum ./
 
 # Baixar dependências
 RUN go mod download
 
 # Copiar código fonte
-COPY src/ ./
+COPY . .
 
 # Build da aplicação
 RUN CGO_ENABLED=0 GOOS=linux go build -o quepasa main.go
