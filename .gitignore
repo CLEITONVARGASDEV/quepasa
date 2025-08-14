@@ -40,13 +40,10 @@ src/.dist/
 # symbolic link to src folder under linux
 quepasa/
 
-docker/chatwoot/.env
 docker/chatwoot/data
 docker/chatwoot/.n8n
 
 docker/chatwoot/.n8n
 docker/chatwoot/data
-docker/chatwoot/.env
-docker/.env
 src/.vs/
 src/models/.dist/win-quepasa-service.exe
