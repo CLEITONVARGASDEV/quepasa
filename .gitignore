@@ -21,7 +21,6 @@ __debug_bin*
 #files for production
 src/.cache 
 src/.profile
-src/.env
 src/go
 src/sqlite3
 src/__debug_bin.exe
@@ -41,7 +40,6 @@ src/.dist/
 # symbolic link to src folder under linux
 quepasa/
 
-docker/.env
 docker/chatwoot/.env
 docker/chatwoot/data
 docker/chatwoot/.n8n

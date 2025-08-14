@@ -2,7 +2,10 @@
 
 1 - Import the project to a folder
 
-2 - Change the .env.example file to .env
+2 - Copy the env.example file to .env:
+   ```bash
+   cp env.example .env
+   ```
 
 3 - Edit the ``.env`` with your settings
 
@@ -12,9 +15,12 @@
 
 1 - Importe o projeto para uma pasta
 
-2 - Altere o arquivo ``docker/.env.example`` para ``docker/.env``
+2 - Copie o arquivo env.example para .env:
+   ```bash
+   cp env.example .env
+   ```
 
-3 - Edite o ``docker/.env`` com suas configuraçõesçk
+3 - Edite o ``.env`` com suas configurações
 
 4 - Faça esta sequência de comandos:
 ```

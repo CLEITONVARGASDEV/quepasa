@@ -174,7 +174,23 @@
  	# DISPATCHUNHANDLED
   	> dispatch to webhook events that do not have a specific approach (default false)
 
-	 
+### Configuration
+
+Para configurar o QuePasa, você precisa criar um arquivo `.env` na pasta `src/` com as variáveis de ambiente necessárias.
+
+1. **Copie o arquivo de exemplo:**
+   ```bash
+   cp env.example src/.env
+   ```
+
+2. **Edite o arquivo `src/.env`** com suas configurações específicas:
+   - Configure as credenciais do banco de dados
+   - Defina sua `MASTERKEY` para administração
+   - Configure o `SIGNING_SECRET` para segurança
+   - Ajuste outras variáveis conforme necessário
+
+3. **Importante:** O arquivo `.env` NÃO é enviado para o GitHub por questões de segurança. Cada desenvolvedor deve criar seu próprio arquivo localmente.
+
 ### License
 
 [![License GNU AGPL v3.0](https://img.shields.io/badge/License-AGPL%203.0-lightgrey.svg)](https://github.com/nocodeleaks/quepasa-fork/blob/master/LICENSE.md)
